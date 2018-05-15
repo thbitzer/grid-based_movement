@@ -9,6 +9,7 @@ This project is not yet finished and is continuously improved.
 | Version tag | Features | Status |
 | --- | --- | ---|
 | V0.1 | Smooth Movement | Complete |
+| V0.2 | Collision Detection | Complete |
 
 ## Smooth Movement
 
@@ -21,3 +22,7 @@ This is difficult in situations where more than one arrow key is pressed simulta
 To make this a bit smoother, a queue was introduced to hold the exact sequence in which the arrow keys have been pressed. If a key was released, it is removed from its current position and the other (still pressed) keys will move up if required. This gives a pretty satisfying gaming experience for all keyboard artists.
 
 The whole queue handling is implemented in 4 scripts (name keyb_buffer_*) which are called from the player object.
+
+## Collision Detection
+
+The player object stops when the target grid position is already occupied by a solid object. To make this work, the object representing the obstacle needs to be flagged as "solid" in the object properties.
