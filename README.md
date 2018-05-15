@@ -26,3 +26,5 @@ The whole queue handling is implemented in 4 scripts (name keyb_buffer_*) which 
 ## Collision Detection
 
 The player object stops when the target grid position is already occupied by a solid object. To make this work, the object representing the obstacle needs to be flagged as "solid" in the object properties.
+
+To test this feature, a feature has been added to set additional walls onto free grid positions (left mouse button) and to remove those walls again (right mouse button). Walls at the edge of the screen must not be removed.
