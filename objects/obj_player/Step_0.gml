@@ -32,25 +32,33 @@ if ( is_moving == false ) {
 	
 	// Ready to move
 	if ( keyb_buffer[0] == DIR.north ) {
-		is_moving = true;
-		to_move = global.grid_size;
-		hsp = 0;
-		vsp = -grid_speed;
+		if ( place_free( x, y-global.grid_size ) ) {
+			is_moving = true;
+			to_move = global.grid_size;
+			hsp = 0;
+			vsp = -grid_speed;
+		}
 	} else if ( keyb_buffer[0] == DIR.south ) {
-		is_moving = true;
-		to_move = global.grid_size;
-		hsp = 0;
-		vsp = grid_speed;
+		if ( place_free( x, y+global.grid_size ) ) {
+			is_moving = true;
+			to_move = global.grid_size;
+			hsp = 0;
+			vsp = grid_speed;
+		}
 	} else if ( keyb_buffer[0] == DIR.west ) {
-		is_moving = true;
-		to_move = global.grid_size;
-		hsp = -grid_speed;
-		vsp = 0;
+		if ( place_free( x-global.grid_size, y ) ) {
+			is_moving = true;
+			to_move = global.grid_size;
+			hsp = -grid_speed;
+			vsp = 0;
+		}
 	} else if ( keyb_buffer[0] == DIR.east ) {
-		is_moving = true;
-		to_move = global.grid_size;
-		hsp = grid_speed;
-		vsp = 0;
+		if ( place_free( x+global.grid_size, y ) ) {
+			is_moving = true;
+			to_move = global.grid_size;
+			hsp = grid_speed;
+			vsp = 0;
+		}
 	}		
 } 
 
