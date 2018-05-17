@@ -10,6 +10,7 @@ This project is not yet finished and is continuously improved.
 | --- | --- | ---|
 | V0.1 | Smooth Movement | Complete |
 | V0.2 | Collision Detection | Complete |
+| V0.3 | Add enemy (move randomly) | In progress |
 
 ## Smooth Movement
 
@@ -28,3 +29,7 @@ The whole queue handling is implemented in 4 scripts (name keyb_buffer_*) which 
 The player object stops when the target grid position is already occupied by a solid object. To make this work, the object representing the obstacle needs to be flagged as "solid" in the object properties.
 
 To test this feature, a feature has been added to set additional walls onto free grid positions (left mouse button) and to remove those walls again (right mouse button). Walls at the edge of the screen must not be removed.
+
+## Add enemy moving randomly
+
+This is the most primitive way of computing the movement of an AI operated object. The object (a ghost) just moves according to random numbers. In 70% of the decisions, it just continues to move straight, in 12.5% of the decisions it turns left or right and in 5% of the decisions it turns by 180 degrees.
