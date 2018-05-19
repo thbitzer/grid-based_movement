@@ -3,12 +3,24 @@
 // This is the code for a ghost after a move is complete (ie. ghost is not moving)
 if ( is_moving == false ) {
 	
+	if ( mode == MODE.idle ) {
+		
+		/*
+		 * Enemy stops
+		 */
+		 
+		mode_text = "idle";
+		desired_dir = DIR.none;
+	}
+	else
 	if ( mode == MODE.stray ) {
 	
 		/*
 		 * Enemy is just walking around (no target)
 		 */
-		 
+		
+		mode_text = "stray";
+		
 		var prev_dir = desired_dir;
 		if ( prev_dir = DIR.none ) {
 			desired_dir = irandom( 4 );
@@ -28,6 +40,12 @@ if ( is_moving == false ) {
 	} // end MODE.stray
 	else
 	if ( mode == MODE.chase ) {
+		
+		/*
+		 * Enemy is seeking the player
+		 */
+		
+		mode_text = "chase";
 
 	} // end MODE.chase
 	

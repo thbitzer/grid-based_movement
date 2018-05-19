@@ -10,7 +10,7 @@ This project is not yet finished and is continuously improved.
 | --- | --- | ---|
 | V0.1 | Smooth Movement | Complete |
 | V0.2 | Collision Detection | Complete |
-| V0.3 | Add enemy (move randomly) | In progress |
+| V0.3 | Add enemy (move randomly) | Complete |
 
 ## Smooth Movement
 
@@ -33,3 +33,5 @@ To test this feature, a feature has been added to set additional walls onto free
 ## Add enemy moving randomly
 
 This is the most primitive way of computing the movement of an AI operated object. The object (a ghost) just moves according to random numbers. In 70% of the decisions, it just continues to move straight, in 12.5% of the decisions it turns left or right and in 5% of the decisions it turns by 180 degrees.
+
+To try different move modes, some buttons have been added to switch between them. 

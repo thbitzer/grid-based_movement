@@ -139,6 +139,20 @@
             "value": "MODE.stray",
             "varName": "mode",
             "varType": 1
+        },
+        {
+            "id": "35ce2f1d-f784-4c2e-9a53-b2cc8d1d9359",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "",
+            "varName": "mode_text",
+            "varType": 2
         }
     ],
     "solid": false,
