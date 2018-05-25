@@ -39,6 +39,59 @@ if ( is_moving == false ) {
 		}
 	} // end MODE.stray
 	else
+	if ( mode == MODE.direct ) {
+		
+		/*
+		 * Enemy works directly towards the player, does not look for obstacles
+		 */
+		
+		mode_text = "direct";
+		
+		// Determine distance to door
+		xdist = obj_player.x - x;
+		ydist = obj_player.y - y;
+		
+		// Still searching the door, determine move possibilities, then move
+		var free_pos = whats_free( x, y, obj_wall );
+			
+		// Determine desired horizontal direction
+		var desired_hor_dir = DIR.none;
+		if ( xdist > 0 ) {
+			desired_hor_dir = DIR.east;
+		} else if ( xdist < 0 ) {
+			desired_hor_dir = DIR.west;
+		}
+			
+		// Determine desired vertical direction
+		var desired_ver_dir = DIR.none;
+		if ( ydist > 0 ) {
+			desired_ver_dir = DIR.south;
+		} else if ( ydist < 0 ) {
+			desired_ver_dir = DIR.north;
+		}
+			
+		// Prioritize moving direction
+		desired_dir = DIR.none;
+		if ( free_pos[desired_hor_dir] and free_pos[desired_ver_dir] ) {
+			// Both desired directions are available, choose the most distant one
+			if ( ( abs( xdist ) >= abs( ydist ) ) ) {
+				desired_dir = desired_hor_dir;
+			} else {
+				desired_dir = desired_ver_dir;
+			}
+		} else if ( free_pos[desired_hor_dir] ) {
+			// Only horizontal movement in desired direction is possible
+			desired_dir = desired_hor_dir;
+		} else if ( free_pos[desired_ver_dir] ) {
+			// Only vertical movement in desired direction is possible
+			desired_dir = desired_ver_dir;
+		} else {
+			// No movement in desired direction is possible
+			desired_dir = DIR.none;
+		}
+		
+	}
+	else
 	if ( mode == MODE.chase ) {
 		
 		/*

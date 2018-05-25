@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "b0d4afe1-20a0-4100-a8c5-1a9bc8c2162a",
+            "Value": {
+                "id": "b662d8d4-199b-42e8-9afa-4b80225e77e1",
+                "resourcePath": "scripts\\whats_free\\whats_free.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bbf6aeec-8315-4308-97e1-010f8779e7eb",
             "Value": {
                 "id": "852b8926-8ad4-413f-bd82-15d4831a625d",
@@ -315,7 +323,8 @@
         "9984b977-f32f-4b24-9257-a1b2ee79395a",
         "33fca7b8-f78e-4f12-af52-650e36878602",
         "10b2941a-2696-4e8a-9779-c7f1c43aa136",
-        "8ac2a748-da6f-4954-a9bc-0756ea6ddc35"
+        "8ac2a748-da6f-4954-a9bc-0756ea6ddc35",
+        "b0d4afe1-20a0-4100-a8c5-1a9bc8c2162a"
     ],
     "tutorial": ""
 }
