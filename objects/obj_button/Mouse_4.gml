@@ -10,4 +10,7 @@ switch ( button_name ) {
 	case "direct":
 		obj_ghost.mode = MODE.direct;
 		break;
+	case "breadth":
+		obj_ghost.mode = MODE.breadth;
+		break;
 }

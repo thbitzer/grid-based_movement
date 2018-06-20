@@ -4,6 +4,6 @@
 enum MODE {
 	idle,
 	stray,
-	chase,
-	direct
+	direct,
+	breadth
 }

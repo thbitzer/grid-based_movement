@@ -92,13 +92,13 @@ if ( is_moving == false ) {
 		
 	}
 	else
-	if ( mode == MODE.chase ) {
+	if ( mode == MODE.breadth ) {
 		
 		/*
 		 * Enemy is seeking the player
 		 */
 		
-		mode_text = "chase";
+		mode_text = "breadth";
 
 	} // end MODE.chase
 	
